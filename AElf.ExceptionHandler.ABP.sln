@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.ExceptionHandler.ABP", "AElf.ExceptionHandler.ABP\AElf.ExceptionHandler.ABP.csproj", "{0D593D89-20E0-4F57-9CC7-B9599E422729}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D593D89-20E0-4F57-9CC7-B9599E422729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D593D89-20E0-4F57-9CC7-B9599E422729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D593D89-20E0-4F57-9CC7-B9599E422729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D593D89-20E0-4F57-9CC7-B9599E422729}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
