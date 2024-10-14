@@ -1,14 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <PackageType>Dependency</PackageType>
+        <PackageId>AElf.ExceptionHandler.ABP</PackageId>
+        <Title>AElf ExceptionHandler ABP</Title>
+        <Authors>AElf</Authors>
+        <Description>An ExceptionHandler in AOP in the ABP Framework.</Description>
+        <PackageTags>aop;abp;module</PackageTags>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RepositoryUrl>https://github.com/AElfProject/AElf.ExceptionHandler.ABP</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/AElfProject/AElf.ExceptionHandler.ABP</PackageProjectUrl>
+        <RootNamespace>AElf.ExceptionHandler.ABP</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Volo.Abp.Core" Version="8.0.5" />
         <PackageReference Include="AElf.ExceptionHandler" Version="1.6.0" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../README.md" Pack="true" PackagePath="" />
+        <None Include="../LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>

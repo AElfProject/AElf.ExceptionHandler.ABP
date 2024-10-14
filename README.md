@@ -1,40 +1,30 @@
-# Project Name
-
-Brief Project Description
+# AElf.ExceptionHandler.ABP
 
 - [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
-  - [Subsection 1](#subsection-1)
-- [Examples](#examples)
-  - [Example 1](#example-1)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## About The Project
 
-Extensive Project Description
+An ABP module for Exception handling through the [AElf.ExceptionHandler](https://www.nuget.org/packages/AElf.ExceptionHandler).
+
+ABP version: 8.0.5
 
 ## Getting Started
 
-### Subsection 1
-
-Before installing, you need to install... Run the following command to install it in the current project:
-
-```sh
-dotnet add package Something
-```
-
-## Examples
-
-Description for examples
-
-### Example 1
-
-To create new context, simply run a query like this:
+Add the following dependency to your project's Module class:
 
 ```cs
-var context = new Context();
+using AElf.ExceptionHandler;
+
+[DependsOn(
+    typeof(AOPExceptionModule)
+)]
+public class MyTemplateModule : AbpModule
 ```
+
+This will automatically register the AOPException module and setup your project for AOP Exception Handling.
 
 ## Contributing
 
