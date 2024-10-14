@@ -18,7 +18,7 @@
 
     <ItemGroup>
         <PackageReference Include="Volo.Abp.Core" Version="8.0.5" />
-        <PackageReference Include="AElf.ExceptionHandler" Version="1.6.0" />
+        <PackageReference Include="AElf.ExceptionHandler" Version="1.6.2" />
     </ItemGroup>
 
     <PropertyGroup>
