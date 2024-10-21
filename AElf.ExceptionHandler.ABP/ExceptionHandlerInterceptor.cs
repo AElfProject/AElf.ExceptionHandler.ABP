@@ -1,8 +1,9 @@
+using Volo.Abp.DependencyInjection;
 using Volo.Abp.DynamicProxy;
 
 namespace AElf.ExceptionHandler.ABP;
 
-public class ExceptionHandlerInterceptor : AbpInterceptor
+public class ExceptionHandlerInterceptor : AbpInterceptor, ITransientDependency
 {
     private readonly IInterceptor _interceptor;
 
@@ -19,10 +20,7 @@ public class ExceptionHandlerInterceptor : AbpInterceptor
             MethodInfo = invocation.Method,
             Arguments = invocation.Arguments,
             ReturnValue = null,
-            Invocation = async () =>
-            {
-                await invocation.ProceedAsync();
-            }
+            Invocation = invocation.ProceedAsync
         };
         
         await _interceptor.InterceptAsync(methodExecutionArgs);
