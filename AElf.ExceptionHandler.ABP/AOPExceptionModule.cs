@@ -3,7 +3,6 @@ using AElf.ExceptionHandler.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Castle;
 using Volo.Abp.DependencyInjection;
-using Volo.Abp.DynamicProxy;
 using Volo.Abp.Modularity;
 
 namespace AElf.ExceptionHandler.ABP;
@@ -21,12 +20,7 @@ public class AOPExceptionModule : AbpModule
     public override void PostConfigureServices(ServiceConfigurationContext context)
     {
         base.PostConfigureServices(context);
-        
-        var builder = context.Services.GetContainerBuilder();
-        
         context.Services.OnRegistered(RegisterExceptionHandlerIfNeeded);
-        
-        AutofacRegistration.Register(builder, context.Services, null);
     }
 
     private static void RegisterExceptionHandlerIfNeeded(IOnServiceRegistredContext context)
