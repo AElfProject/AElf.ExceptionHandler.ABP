@@ -19,9 +19,20 @@ Add the following dependency to your project's Module class:
 using AElf.ExceptionHandler;
 
 [DependsOn(
-    typeof(AOPExceptionModule)
+    typeof(AOPExceptionModule) // Add this line
 )]
 public class MyTemplateModule : AbpModule
+```
+
+When setting up your `HostBuilder` in your `Program.cs` file, add the following line:
+
+```cs
+var builder = WebApplication.CreateBuilder(args);
+builder.Host
+    .ConfigureDefaults(args)
+    .UseAutofac()
+    .UseAElfExceptionHandler() // Add this line
+    .UseSerilog();
 ```
 
 This will automatically register the AOPException module and setup your project for AOP Exception Handling.
