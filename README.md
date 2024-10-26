@@ -9,7 +9,7 @@
 
 An ABP module for Exception handling through the [AElf.ExceptionHandler](https://www.nuget.org/packages/AElf.ExceptionHandler).
 
-ABP version: 8.0.5
+ABP version: 8.2.0
 
 ## Getting Started
 
