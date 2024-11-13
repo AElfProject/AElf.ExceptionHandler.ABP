@@ -317,12 +317,6 @@ public static class AutofacRegistration
                 {
                     continue;
                 }
-                
-                // Class type are already registered properly and can be ignored
-                if (descriptor.ServiceType.IsClass)
-                {
-                    continue;
-                }
             }
             
             if (implementationType != null)
