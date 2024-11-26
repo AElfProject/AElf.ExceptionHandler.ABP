@@ -22,7 +22,7 @@ public class AOPExceptionModule : AbpModule
         base.PostConfigureServices(context);
         context.Services.OnRegistered(RegisterExceptionHandlerIfNeeded);
         //remove all services that are satisfies ShouldIntercept. To be registered again later.
-        AElfExceptionHandlerHostBuilderExtensions.ExceptionHandlerServices = context.Services.RemoveAll(s => s.ImplementationType != null && ShouldIntercept(s.ImplementationType));
+        AElfExceptionHandlerHostBuilderExtensions.ExceptionHandlerServices = context.Services.RemoveAll(s => s.NormalizedImplementationType() != null && ShouldIntercept(s.NormalizedImplementationType()));
     }
 
     private static void RegisterExceptionHandlerIfNeeded(IOnServiceRegistredContext context)
